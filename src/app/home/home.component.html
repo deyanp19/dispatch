@@ -1,0 +1,6 @@
+<p *ngIf='item'>{{name}}  {{randomNum()}}</p>
+
+<input  [placeholder]='nameOfPlaceholder' #input1>
+<input type="checkbox" [(ngModel)]='item'>
+<button  (click)='displayAlert(input1.value,$event)'>What did i write in the input</button>
+

@@ -1,0 +1,1 @@
+export interface IDriver {name:string,age:number}

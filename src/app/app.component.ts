@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'first-app';
+    driversList=[
+    {name:'Ivan',age:34},
+    {name:'Damyan',age:33},
+    {name:'Ivan',age:34},
+
+  ]; 
+
 }
