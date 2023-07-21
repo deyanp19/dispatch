@@ -14,4 +14,10 @@ export class AppComponent {
 
   ]; 
 
+  addNewEmitHandler(emittedPeople:{name:string,age:number}):void {
+    this.driversList.push(emittedPeople);
+    this.driversList.forEach(x=>x.age=x.age+x.name.length/99);
+    
+  }
+
 }

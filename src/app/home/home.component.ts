@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -9,18 +9,15 @@ export class HomeComponent implements OnInit {
   name='Quatron Logistics Dashboard';
   nameOfPlaceholder = 'Quatron Logistics'
   item=true;
-
+  inputText='zara';
+  @Output() addMessageToParent=new EventEmitter();
   constructor() {
-   
+    
    }
-
-  randomNum(){
-    return "88";
-  }
-
   displayAlert(msg:string,event:Event){
     this.name=msg;
-    console.log(event);
+    this.inputText='';
+    this.addMessageToParent.emit({name:msg,age:msg.length*4})
     
     return !this.item;
     

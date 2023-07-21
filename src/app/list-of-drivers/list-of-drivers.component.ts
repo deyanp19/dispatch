@@ -10,7 +10,7 @@ import {IDriver} from '../interface';
 
 
 export class ListOfDriversComponent implements OnInit {
- @Input() arrayOfDrivers:any;
+ @Input() arrayOfDrivers:{name:string,age:number}[]=[];
   constructor() {
    
    }
