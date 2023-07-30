@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ListOfTrucksComponent } from './list-of-trucks/list-of-trucks.component';
 import { ListOfDriversComponent } from './list-of-drivers/list-of-drivers.component';
+import { MyIfDirective } from './my-if.directive';
+import { LogInComponent } from './log-in/log-in.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ListOfTrucksComponent,
-    ListOfDriversComponent
+    ListOfDriversComponent,
+    MyIfDirective,
+    LogInComponent
   ],
   imports: [
     BrowserModule,

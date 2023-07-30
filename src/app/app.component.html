@@ -1,4 +1,18 @@
-<h4>Dispatcher Dashboard</h4>
+<ng-template #isTitleTemplate>
+
+    <h4>Press the button to show drivers list</h4>
+</ng-template>
 <h6>Your trucks and drivers</h6>
+
 <app-home  (addMessageToParent)='addNewEmitHandler($event)' ></app-home>
-<app-list-of-drivers [arrayOfDrivers]='driversList'></app-list-of-drivers>
+<div id="buttons">
+    <br>
+    <button (click)="toggleTitle()">Toggle Title</button>
+    <br>
+    <br>
+    <button (click)="toggleDrivers()">Show/hide Drivers List</button>
+</div>
+    <ng-template #isDriverListTemplate>
+    <app-list-of-drivers [arrayOfDrivers]='driversList'></app-list-of-drivers>
+</ng-template>
+<ng-container *ngTemplateOutlet="flagDriversList ?isTitleTemplate:isDriverListTemplate"></ng-container>
