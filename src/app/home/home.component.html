@@ -1,6 +1,8 @@
-<p *ngIf='item'>{{name}} </p>
+<p >{{name}} </p>
+<form #deyanForm='ngForm'>
 
-<input [(ngModel)]='inputText' [placeholder]='nameOfPlaceholder' #input1>
-<input type="checkbox"  [(ngModel)]='item'>
-<button  (click)='displayAlert(input1.value,$event)'>What did i write in the input</button>
+    <input [(ngModel)]='inputText' [placeholder]='nameOfPlaceholder' #input1>
+    <input type="checkbox"  [(ngModel)]='item'>
+    <button  (click)='displayAlert(input1.value,$event)'>What did i write in the input</button>
+</form>
 

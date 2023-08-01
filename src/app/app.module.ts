@@ -10,6 +10,7 @@ import { ListOfTrucksComponent } from './list-of-trucks/list-of-trucks.component
 import { ListOfDriversComponent } from './list-of-drivers/list-of-drivers.component';
 import { MyIfDirective } from './my-if.directive';
 import { LogInComponent } from './log-in/log-in.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LogInComponent } from './log-in/log-in.component';
     ListOfTrucksComponent,
     ListOfDriversComponent,
     MyIfDirective,
-    LogInComponent
+    LogInComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,

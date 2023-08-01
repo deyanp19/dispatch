@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +13,7 @@ export class HomeComponent implements OnInit {
   inputText='zara';
   @Output() addMessageToParent=new EventEmitter();
   constructor() {
+    deyanForm: NgForm;
     
    }
   displayAlert(msg:string,event:Event){
