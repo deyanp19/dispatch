@@ -5,16 +5,18 @@ import { HomeComponent } from './home/home.component';
 import { ListOfDriversComponent } from './list-of-drivers/list-of-drivers.component';
 import { ListOfTrucksComponent } from './list-of-trucks/list-of-trucks.component';
 import { LogInComponent } from './log-in/log-in.component';
+import { RegisterComponent } from './register/register.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 const routes: Routes = [
-  {
-    path:"",
-    redirectTo:'home',
-    pathMatch: 'full',
-  },
+
   {
     path:'about',
     component:HomeComponent
+  },
+  {
+    path:'register',
+    component:RegisterComponent
   },
   {
     path:'dirvers',
@@ -26,6 +28,7 @@ const routes: Routes = [
   },
   {
     path:'login',
+    pathMatch:'full',
     component:LogInComponent
   },
   {path:'**',
@@ -34,7 +37,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), ReactiveFormsModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

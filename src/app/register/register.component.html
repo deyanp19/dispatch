@@ -1,28 +1,28 @@
-<!-- 
+<form [formGroup]="form" (ngSubmit)="submitHandler(form)">
 
-<form #form="ngForm" (ngSubmit)="loginHandler(form)">
     <div class="form-group">
         <label for="email">Email</label>
-        <input type="text" name="email" id="email" #emailinput="ngModel" ngModel required email>
-        <div *ngIf="emailinput.invalid && emailinput.touched">
+        <input type="text" name="email" id="email" formControlName='email'>
+        <!-- <div *ngIf="emailinput.invalid && emailinput.touched">
             <li *ngIf="emailinput.errors!required">email is required</li>
             <li *ngIf="emailinput.errors!email">email is invalid</li>
 
-        </div>
+        </div> -->
     </div>
     <div class="form-group">
         <label for="password">password</label>
-        <input type="password" name="password"  id="password" #passwordInput="ngModel" ngModel required [minlength]="2">
-        <div *ngIf="passwordInput.invalid&&passwordInput.touched">
+        <input type="password" name="password"  id="password" formControlName='password'>
+        <!-- <div *ngIf="passwordInput.invalid&&passwordInput.touched">
             <li *ngIf="passwordInput.errors!minlength">Password min 2 word</li>
             <li *ngIf="passwordInput.errors!required" >Password is reuqired</li>
 
 
-        </div>
+        </div> -->
     </div>
     <div class="form-group">
         <label for="repeat-password">repeat-password</label>
-        <input type="text" name="repeat-password" id="repeat-password" ngModel>
+        <input type="text" name="repeat-password" id="repeat-password" formControlName='repeatPassword'>
     </div>
-    <button>Login</button>
-</form> -->
+    <button>Register</button>
+
+</form>

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { BrowserModule } from '@angular/platform-browser';
 import {CommonModule} from '@angular/common';
 
@@ -10,7 +10,12 @@ import { ListOfTrucksComponent } from './list-of-trucks/list-of-trucks.component
 import { ListOfDriversComponent } from './list-of-drivers/list-of-drivers.component';
 import { MyIfDirective } from './my-if.directive';
 import { LogInComponent } from './log-in/log-in.component';
-import { FormComponent } from './form/form.component';
+ 
+import { HttpClientModule} from '@angular/common/http';
+import { UserService } from './user.service';
+import { UsersComponent } from './users/users.component';
+import { RegisterComponent } from './register/register.component';
+
 
 @NgModule({
   declarations: [
@@ -20,15 +25,21 @@ import { FormComponent } from './form/form.component';
     ListOfDriversComponent,
     MyIfDirective,
     LogInComponent,
-    FormComponent,
+ 
+    UsersComponent,
+    RegisterComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    FormsModule
+   
+    ReactiveFormsModule,
+    HttpClientModule,
+    
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

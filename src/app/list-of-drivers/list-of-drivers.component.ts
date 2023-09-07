@@ -1,6 +1,7 @@
 import { Component, Input, OnInit,Directive } from '@angular/core';
 import {IDriver} from '../interface';
 
+
 @Component({
   selector: 'app-list-of-drivers',
   templateUrl: './list-of-drivers.component.html',

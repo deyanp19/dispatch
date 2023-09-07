@@ -1,3 +1,4 @@
+
 <ng-template #isTitleTemplate>
 
     <h4>Press the button to show drivers list</h4>
@@ -5,7 +6,7 @@
 <h6>Your trucks and drivers</h6>
 
 <app-home  (addMessageToParent)='addNewEmitHandler($event)' ></app-home>
-<app-form></app-form>
+ 
 <div id="buttons">
     <br>
     <button (click)="toggleTitle()">Toggle Title</button>
